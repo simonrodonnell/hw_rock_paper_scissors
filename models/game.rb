@@ -6,26 +6,13 @@ class Game
     hand1 = hand1.downcase()
     hand2 = hand2.downcase()
 
-    if hand1 == "rock"
-      if hand2 == "scissors"
-        return "Rock beats scissors!"
-      elsif hand2 == "paper"
-        return "Paper beats rock!"
-      end
-    elsif hand1 == "scissors"
-      if hand2 == "rock"
-        return "Rock beats scissors!"
-      elsif hand2 == "paper"
-        return "Scissors beat paper!"
-      end
-    elsif hand1 == "paper"
-      if hand2 == "scissors"
-        return "Scissors beat paper!"
-      elsif hand2 == "rock"
-        return "Paper beats rock!"
-      end
+    if (hand1 == "rock" && hand2 == "scissors") || (hand1 == "scissors" && hand2 == "rock")
+      return "Rock beats scissors!"
+    elsif (hand1 == "rock" && hand2 == "paper") || (hand1 == "paper" && hand2 == "rock")
+      return "Paper beats rock!"
+    elsif (hand1 == "scissors" && hand2 == "paper") || (hand1 == "paper" && hand2 == "scissors")
+      return "Scissors beat paper!"
     end
-
 
   end
 
